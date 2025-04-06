@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 20px;
+    max-width: max-content;
+}
+select,input,button {
+    padding: 10px;
+    border-radius: 10px;
+}
+select, button {
+    cursor: pointer;
+}
+select,input {
+    border: 1px solid #0044ff;
+    outline-color: #c800ff;
+}
+button {
+    background-color: #0044ff;
+    border: 1px solid #0044ff;
+    color: azure;
+}
+p {
+    text-align: center;
+}
+#result {
+    color: #0044ff;
+}
+#err {
+    color: #ff0000;
+}

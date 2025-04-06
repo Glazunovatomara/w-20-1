@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/style.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <main class="main">
+        <h1>Кого или что хочешь найти?</h1>
+        <div>
+            <select name="" id="category">
+                <option value="films">фильм</option>
+                <option value="people">человек</option>
+                <option value="planets">планета</option>
+                <option value="species">разновидность персонажа</option>
+                <option value="starships">звездолет</option>
+                <option value="vehicles">транспортное средство</option>
+            </select>
+            <input type="number" id="num" min="1" max="20">
+            <button class="button" onclick="addResult()">найти</button>
+        </div>
+        <p id="result"></p>
+        <p id="err"></p>
+    </main>
+    <script src="./assets/script/script.js"></script>
+</body>
+</html>
