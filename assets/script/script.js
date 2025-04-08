@@ -12,25 +12,30 @@ const addResult = () => {
     if(!numValue) {
         err.textContent ='выберите номер'
     }
+    console.log(`${lnk}${categoryValue}/${numValue}`)
 //    try {
         fetch(`${lnk}${categoryValue}/${numValue}`)
         .then((response) => {
+        if(!response.ok) {
+            throw new Error (response.status)
+        }
             return response.json();
         })
         .then((data) => {
-        //console.log(data);
-        console.log("1")
+//        console.log(data);
+//        console.log("1")
+
             if(categoryValue !== 'films') {
                 result.textContent = data.name
-                console.log("2")
+//                console.log("2")
             } else {
                 result.textContent = data.title
-                console.log("3")
+//                console.log("3")
             } 
         })
 //    } 
     .catch ((error) => {
-        err.textContent = "Ошибка:"+ error
+        err.textContent = "Ошибка:"+ error.message
         console.log("Ошибка:" + error)
     })
 }
